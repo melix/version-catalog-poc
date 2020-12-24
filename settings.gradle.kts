@@ -6,19 +6,6 @@
  * Detailed information about configuring a multi-project build in Gradle can be found
  * in the user manual at https://docs.gradle.org/7.0-20201224092022+0000/userguide/multi_project_builds.html
  */
-
-pluginManagement {
-    includeBuild("shared-catalog")
-    repositories {
-        gradlePluginPortal()
-        jcenter()
-    }
-}
-
-plugins {
-    id("org.gradle.my-catalog")
-}
-
 rootProject.name = "catalog-pocs"
 include("lib")
 
@@ -27,5 +14,13 @@ includeBuild("build-logic")
 dependencyResolutionManagement {
     repositories {
         jcenter()
+        maven {
+            url = uri("shared-catalog/build/repo")
+        }
+    }
+    versionCatalogs {
+        create("libs") {
+            from("org.gradle.poc:shared-catalog:1.0")
+        }
     }
 }
