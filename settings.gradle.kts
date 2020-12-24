@@ -9,3 +9,5 @@
 
 rootProject.name = "catalog-pocs"
 include("lib")
+
+includeBuild("build-logic")
