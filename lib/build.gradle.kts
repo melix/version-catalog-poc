@@ -11,11 +11,6 @@ plugins {
     `java-library`
 }
 
-repositories {
-    // Use JCenter for resolving dependencies.
-    jcenter()
-}
-
 dependencies {
     // Use JUnit Jupiter API for testing.
     testImplementation(libs.junit.api)
