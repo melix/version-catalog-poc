@@ -16,6 +16,7 @@ This is a simplified version of what you would have to do to share a catalog bet
 
 In this repository, you will need to take a look at 4 different branches to explore the options we have:
 
+- the `with-settings` version is the reference for the settings DSL: it doesn't try to share anything but rather duplicates everything in settings
 - the `with-settings-plugin` demonstrates sharing versions via a Settings plugin
 - the `with-precompiled-settings-plugin` does the same using a precompiled settings plugin
 - the `with-toml` version shows how to do the same using the conventional TOML file
